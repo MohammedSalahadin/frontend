@@ -41,7 +41,7 @@
       <div class="feedback_div">
         <span>Did this answer your question?</span>
         <ul class="feedback">
-          <li class="angry">
+          <li class="angry" title="Disappointed">
             <div>
               <svg class="eye left">
                 <use xlink:href="#eye">
@@ -54,10 +54,10 @@
               </svg>
             </div>
           </li>
-          <li class="ok">
+          <li class="ok" title="Neutral face">
             <div></div>
           </li>
-          <li class="happy">
+          <li class="happy" title="Smiley">
             <div>
               <svg class="eye left">
                 <use xlink:href="#eye">
