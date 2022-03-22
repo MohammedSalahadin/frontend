@@ -1,0 +1,153 @@
+<?php
+session_start();
+ ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/styles/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/styles/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <title>Falcontrac</title>
+    <?php
+    if (isset($_POST['submit'])) {
+        
+        //header("Location: routes/monitor.php");
+        if (isset($_POST['rr'])) {
+            $check = $_POST['rr'];
+            include 'classes/user.php';
+            if ($check == "Admin") {
+                 
+                $un = $_POST['userName'];
+                $pas = $_POST['password'];
+
+                $user = new user();
+                $user =$user->login($un, $pas);
+
+                if ($user->loggedIn == true) {
+                    //setup session
+                    $_SESSION["user"]=$user;
+                    //redirect user
+                    header("Location: routes/monitor.php");
+                } else {
+                    echo '<script type="text/javascript">
+
+            alert("Your Email or Password is Incorrect"); 
+
+                            </script>';
+                } 
+            } /*else {
+                if ($check == "custommer") {
+                    
+                    $un = $_POST['userName'];
+                    $pas = $_POST['password'];
+
+                    $test = new customer();
+                    $test->login($un, $pas);
+
+                    if ($test->loggedIn == true) {
+                        //setup session
+
+                        //redirect user
+                        header("Location: routes/monitor.php");
+                    } else {
+                        echo '<script type="text/javascript">
+
+                             alert("Your Email or Password is Incorrect"); 
+
+                            </script>';
+                    } 
+                }
+            }*/
+        }
+    }
+
+
+
+
+
+    ?>
+
+
+
+</head>
+
+
+<body>
+    <!-- navbar start   -->
+    <div class="container py-4">
+        <div class="d-flex justify-content-between">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="">
+            </div>
+            <ul class="nav">
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="#">test</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">test</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">test</a>
+                </li> -->
+
+            </ul>
+        </div>
+        <!-- navbar end   -->
+
+
+
+        <!-- login form start  -->
+        <div class="d-flex justify-content-center pt-5">
+            <!-- --------------------------------------------formm------------------------------------- -->
+            <form class="bg-light p-5 rounded shadow w-75" method="POST">
+                <h1 class="text-center login-text">Login</h1>
+                <br>
+                <input type="radio" selected name="rr" value="Admin" checked>
+                  <label for="Admin">Admin</label>
+                  <input type="radio" name="rr" value="custommer" >
+                  <label for="custommer">Custommer</label><br>
+                <div class="mb-3">
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="addon-wrapping">@</span>
+                        <input type="text" class="form-control" placeholder="Username" name="userName" id="userName">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="addon-wrapping">***</span>
+                        <input type="password" class="form-control" placeholder="password" name="password" id="password">
+                    </div>
+                    <div id="emailHelp" class="form-text">We'll never share your password with anyone else.</div>
+                    <div class="text-center m-1">
+
+
+                    </div>
+
+                </div>
+                <div class="mb-3 forget-password">
+                    <p data-bs-toggle="modal" data-bs-target="#exampleModal">Forgot your passwoed ?</p>
+
+                </div>
+                <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+    <!-- login form end  -->
+
+
+
+
+    <!-- login form end --->
+
+
+    <!-- resetmodal -->
+
+
+
+
+</body>
+
+</html>
