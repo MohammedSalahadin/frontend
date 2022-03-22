@@ -1,4 +1,7 @@
-
+window.onload = function() {
+	//focus on search input
+	$( "#search" ).focus();
+};
 //display close button for search field when input
 $('body').delegate('#search', 'input', function () {
 	if($(this).val()==""){
@@ -21,9 +24,6 @@ $('body').delegate('#clear_search_btn', 'click', function () {
 	$(this).parent().find('input').focus();
 
 });
-
-
-
 
 //hide when click outside
 $(document).mouseup(function(e) {
