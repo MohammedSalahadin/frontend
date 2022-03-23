@@ -1,20 +1,28 @@
 <?php
   require('../../header.php');
+  require('../../classes/company.php');
 if (isset($_POST["companyName"]))
 {
-  htmlspecialchars(trim($_POST['companyName']));
-  htmlspecialchars(trim($_POST['webAddress']));
-  htmlspecialchars(trim($_POST['note']));
-  htmlspecialchars(trim($_POST['streetNumber']));
-  htmlspecialchars(trim($_POST['streetName']));
-  htmlspecialchars(trim($_POST['streetType']));
-  htmlspecialchars(trim($_POST['city']));
-  htmlspecialchars(trim($_POST['state']));
-  htmlspecialchars(trim($_POST['zip']));
-  htmlspecialchars(trim($_POST['buildingNumber']));
-  htmlspecialchars(trim($_POST['mainPhone']));
-  htmlspecialchars(trim($_POST['fax']));
-  //'companies'
+  $company = new company;
+
+  $company->companyName = trim($_POST['companyName']);
+  $company->webAddress =trim($_POST['webAddress']);
+  $company->note =trim($_POST['note']);
+  $company->streetNumber =trim($_POST['streetNumber']);
+  $company->streetName =trim($_POST['streetName']);
+  $company->streetType =trim($_POST['streetType']);
+  $company->city =trim($_POST['city']);
+  $company->state =trim($_POST['state']);
+  $company->zip =trim($_POST['zip']);
+  $company->buildingNumber =trim($_POST['buildingNumber']);
+  $company->mainPhone =trim($_POST['mainPhone']);
+  $company->fax =trim($_POST['fax']);
+  $result = $company->insert();
+  if ($result==true)
+  echo '<script>alert("Company has been added successfully")</script>';
+  else
+  echo '<script>alert("error");console.log("'.$result.'");</script>';
+  
 }
   
 ?>

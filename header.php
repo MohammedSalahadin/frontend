@@ -2,8 +2,9 @@
 include_once 'classes/global.php';
 include_once 'classes/user.php';
 
-session_start();
 ob_start();
+session_start();
+
 $global = new _global;
 if (!isset($_SESSION['user'])) {
 

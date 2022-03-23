@@ -1,5 +1,6 @@
-<?php 
-class companyName{
+<?php
+class company
+{
   public $companyName;
   public $webAddress;
   public $note;
@@ -13,6 +14,15 @@ class companyName{
   public $mainPhone;
   public $fax;
 
+  public function insert()
+  {
+    $global = new _global;
+    $global->insert('companies',$this);
+    if ($global->success == true)
+return true;
+else 
+return $global->error; 
+  }
   
 }
 ?>

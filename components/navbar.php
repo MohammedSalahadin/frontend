@@ -7,7 +7,7 @@
                 <button class="btn mx-3 rounded btn-primary ">
                     issue monitor
                 </button>
-                 <a href="<?=$actual_link?>/logout.php">
+                 <a href="<?=$global->SITE_URL?>/logout.php">
                      <button  class=" btn mx-3 rounded btn-primary">
                          logout
                      </button>

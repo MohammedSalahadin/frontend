@@ -1,13 +1,17 @@
 <?php
-include_once('global.php');
 class user
 {
-    function __construct()
+  public $loggedIn = false;
+  public $userName = "";
+  public $password="";
+  public $userId="";
+  
+  function __construct()
   {
   }
 
-    public $loggedIn = false;
-    public $userName = "",$password="",$userId="";
+   
+    
     function login($userName,$password)
     {
       $global = new _global;

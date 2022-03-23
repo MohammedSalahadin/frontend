@@ -17,7 +17,9 @@ session_start();
         //header("Location: routes/monitor.php");
         if (isset($_POST['rr'])) {
             $check = $_POST['rr'];
-            include 'classes/user.php';
+            include_once 'classes/user.php';
+            include_once 'classes/global.php';
+
             if ($check == "Admin") {
                  
                 $un = $_POST['userName'];
