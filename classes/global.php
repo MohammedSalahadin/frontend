@@ -71,7 +71,7 @@ class _global
         
         $fields = get_object_vars($obj);
         $fields = $this->array_except($fields,$exclude);
-        var_dump($fields);
+
         try{
             $field_names = array();
             $field_names = array_keys($fields);
