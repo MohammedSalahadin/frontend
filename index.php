@@ -10,11 +10,6 @@
     <link rel="stylesheet" href="assets/styles/styles.css">
     <title>Falcontrac</title>
 
-
-
-
-
-
     <?php
 
     if (isset($_POST['submit'])) {

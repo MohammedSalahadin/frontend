@@ -1,4 +1,5 @@
 <div class="d-block">
+
   <table class="table table-striped ">
     <thead class="bg--secondary">
     <tr>
@@ -15,6 +16,7 @@
         <select class="form-select bg-light" aria-label="property name">
           <option selected disabled>Reported Issue</option>
           <option value="1">test</option>
+
         </select>
       </th>
       <th scope="col">

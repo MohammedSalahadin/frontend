@@ -1,8 +1,4 @@
-<?php
-
-
-
-?>
+<?php ?>
 
 <nav class="container navbar navbar-expand-lg navbar-light bg-light ">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,8 +50,8 @@
             System
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">System Config</a>
-            <a class="dropdown-item" href="#">Device Maintinance</a>
+            <a class="dropdown-item" href="../routes/systemconfig.php">System Config</a>
+            <a class="dropdown-item" href="../routes/device.php">Device Maintinance</a>
           </div>
         </li>
         <li class="nav-item dropdown">
