@@ -35,7 +35,7 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="#">All Reports</a>
-            <a class="dropdown-item" href="#">All Reports (Legacy)</a>
+            <a class="dropdown-item" href="../routes/report.php">All Reports (Legacy)</a>
           </div>
         </li>
         <li class="nav-item dropdown">

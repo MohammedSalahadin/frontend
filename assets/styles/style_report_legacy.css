@@ -1,0 +1,41 @@
+.p1{
+    margin-left: 20px; 
+    margin-bottom: 40px; 
+    accent-color: gray;
+}
+.p2{
+    background-color: #204e89; 
+    color: white; font-weight: 
+    500; font-size: 15px; 
+    width: 100px; 
+    height: 30px; 
+    margin-bottom: 20px;
+}
+.p3{
+    border-color: black; 
+    transform: translateY(-150px); 
+    float: right; border-style: solid; 
+    border-width: 2px; 
+    width: 350px; 
+    height: 140px; 
+    margin-right: 100px;
+}
+.p4{
+    margin-left: 12px; 
+    margin-top: 5px;
+}
+.p5{
+    font-size: 18px; 
+    font-weight: 700;
+}
+
+.center {
+    margin: auto;
+    width: 60%;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.hideform {
+    display: none;
+}
