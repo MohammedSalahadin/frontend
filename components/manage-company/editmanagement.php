@@ -4,6 +4,7 @@
     <label for="companyName" class="col-sm-4 col-form-label text-end">Management Company</label>
     <div class="col-sm-8">
       <select class="form-control" name="slcCompany" id="slcCompany">
+      <option>Choose</option>
           <?php 
           foreach($companies as $slcCompany)
           {
@@ -27,6 +28,17 @@
     <label for="shippingAddress" class="col-sm-4 col-form-label text-end">Shipping Address</label>
     <div class="col-sm-5">
       <select class="form-control"  name="shippingAddress" id="shippingAddress">
+      <?php
+      foreach($shippingAddresses as $slcShippingAddress)
+          {
+?>
+<option <?php  //if (isset($_GET["addressId"])) if ($companyId==$slcShippingAddress->addressId) echo "selected"?> 
+value="<?=$slcShippingAddress->addressId?>">
+<?=$slcShippingAddress->$streetNumber." ".$slcShippingAddress->$streetName." ".$slcShippingAddress->$streetType." Building".$slcShippingAddress->buildingNumber?>
+</option>
+<?php
+          }
+          ?>
       </select>
     </div>
     <div class="col-sm-3">
@@ -39,6 +51,7 @@
     <label for="billingAddress" class="col-sm-4 col-form-label text-end">Billing Address</label>
     <div class="col-sm-5">
       <select class="form-control"  name="billingAddress" id="billingAddress">
+      <?=$slcShippingAddress->$streetNumber." ".$slcShippingAddress->$streetName." ".$slcShippingAddress->$streetType." Building".$slcShippingAddress->buildingNumber?>
       </select>
     </div>
   </div>
@@ -79,13 +92,13 @@
 <div class="form-group row  mb-2">
     <label for="streetNumber" class="col-sm-4 col-form-label text-end">Street Number</label>
     <div class="col-sm-8">
-      <input type="text" class="form-control required" name="streetNumber" id="streetNumber" placeholder="Street Number">
+      <input type="text" class="form-control required" required name="streetNumber" id="streetNumber" placeholder="Street Number">
     </div>
   </div>
   <div class="form-group row  mb-2">
     <label for="streetName" class="col-sm-4 col-form-label text-end">Street Name</label>
     <div class="col-sm-8">
-      <input type="text" class="form-control required" name="streetName" id="streetName" placeholder="Street Name">
+      <input type="text" class="form-control required" required name="streetName" id="streetName" placeholder="Street Name">
     </div>
   </div> 
   <div class="form-group row  mb-2">

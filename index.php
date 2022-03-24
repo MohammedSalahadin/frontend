@@ -79,7 +79,7 @@ session_start();
 
 <body>
     <!-- navbar start   -->
-    <div class="container py-4">
+    <div class=" py-4">
         <div class="d-flex justify-content-between">
             <div class="logo">
                 <img src="assets/images/logo.png" alt="">

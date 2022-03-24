@@ -1,20 +1,17 @@
 <?php
-class company
+class shippingAddress
 {
-  public $companyName;
-  public $webAddress;
-  public $note;
-  public $billingAddress;
+  public $addressId;
   public $streetNumber;
   public $streetName;
   public $streetType;
+  public $addressLine2;
   public $city;
   public $state;
   public $zip;
+  public $country;
   public $buildingNumber;
-  public $mainPhone;
-  public $fax;
-  
+  public $addressType;
 
   function __construct()
   {
@@ -24,7 +21,7 @@ class company
   {
     $global = new _global;
 
-    $global->insert('companies',$this);
+    $global->insert('shippingAddresses',$this);
     if ($global->success == true)
 return true;
 else 
@@ -34,8 +31,8 @@ return $global->error;
   public function update($filter)
   {
     $global = new _global;
-$exclude = array('streetNumber','streetName','streetType','city','state','zip','buildingNumber');
-    $global->update('companies',$this,$filter,$exclude);
+// $exclude = array('streetNumber','streetName','streetType','city','state','zip','buildingNumber');
+    $global->update('shippingAddresses',$this,$filter,$exclude);
     if ($global->success == true)
 return true;
 else 

@@ -1,8 +1,10 @@
 <?php
   require('../../header.php');
   require('../../classes/company.php');
+  require('../../classes/shippingAddress.php');
+
   $companies = $global->select('companies',null);
-  
+ 
   if (isset($_GET["companyId"]))
   $companyId=$_GET["companyId"];
 if (isset($_POST["slcCompany"]))
@@ -12,20 +14,13 @@ if (isset($_POST["slcCompany"]))
   $company->companyName = trim($_POST['companyName']);
   $company->webAddress =trim($_POST['webAddress']);
   $company->note =trim($_POST['note']);
-  // $company->streetNumber =trim($_POST['streetNumber']);
-  // $company->streetName =trim($_POST['streetName']);
-  // $company->streetType =trim($_POST['streetType']);
-  // $company->city =trim($_POST['city']);
-  // $company->state =trim($_POST['state']);
-  // $company->zip =trim($_POST['zip']);
-  // $company->buildingNumber =trim($_POST['buildingNumber']);
   $company->mainPhone =trim($_POST['mainPhone']);
   $company->fax =trim($_POST['fax']);
   $result = $company->update("companyId = $companyId");
   if ($result==true)
   {
   echo '<script>alert("Company has been edited successfully");</script>';
- // echo '<script>window.location.href = window.location.href;</script>';
+  echo '<script>window.location.href = window.location.href;</script>';
   }
   else
   echo '<script>alert("error");console.log("'.$result.'");</script>';
@@ -45,12 +40,36 @@ if (isset($_GET["companyId"]))
   
 }
 
+$shippingAddresses = $global->select('shippingAddresses',null);
+ 
+if (isset($_POST['streetNumber']))
+{
+$shippingAddress = new shippingAddress;
+
+$shippingAddress->streetNumber = trim($_POST['streetNumber']);
+$shippingAddress->streetName =trim($_POST['streetName']);
+$shippingAddress->streetType =trim($_POST['streetType']);
+$shippingAddress->addressLine2 =trim($_POST['addressLine2']);
+$shippingAddress->city =trim($_POST['city']);
+$shippingAddress->state = trim($_POST['state']);
+$shippingAddress->zip =trim($_POST['zip']);
+$shippingAddress->country =trim($_POST['country']);
+$shippingAddress->buildingNumber =trim($_POST['buildingNumber']);
+$shippingAddress->addressType =trim($_POST['addressType']);
+//$shippingAddress->companyId = $companyId;
+
+$result = $shippingAddress->insert();
+  if ($result==true)
+  echo '<script>alert("Shipping address has been added successfully")</script>';
+  else
+  echo '<script>alert("error");console.log("'.$result.'");</script>';
+}
 ?>
 <script>
   $( function() {
     $( "#ِaddDialog" ).dialog({
       autoOpen: false,
-      width: "30%", height: 600
+      width: "30%", height: 450
     });
     $( "#Add" ).on( "click", function() {
       $( "#ِaddDialog" ).dialog( "open" );
@@ -60,7 +79,7 @@ if (isset($_GET["companyId"]))
 });
   } );
   </script>
-<div class="container d-flex justify-content-center">
+<div class="d-flex justify-content-center">
 <div class="col-lg-6">
   <div class=" p-1 rounded text-center mt-3 bg--primary">
     <h3 class="" style="color: gray;">EDIT MANAGEMENT COMPANY</h3>

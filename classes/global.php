@@ -25,6 +25,7 @@ class _global
         $insert .= "(" . implode(",", $placeholders) . ")";
         $stmt = $this->DB->prepare($insert);
         $stmt->execute($fields);
+        var_dump($stmt->errorInfo());
         if ($stmt->errorInfo()[0]=="00000")
         {
             $this->success=true;

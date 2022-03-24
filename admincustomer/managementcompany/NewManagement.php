@@ -21,12 +21,12 @@ if (isset($_POST["companyName"]))
   if ($result==true)
   echo '<script>alert("Company has been added successfully")</script>';
   else
-  echo '<script>alert("error");console.log("'.$result.'");</script>';
+  echo '<script>alert("'.var_dump($result).'");alert("error");</script>';
   
 }
   
 ?>
-<div class="container d-flex justify-content-center">
+<div class="d-flex justify-content-center">
 <div class="col-lg-6">
 
 <?php
