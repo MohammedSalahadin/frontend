@@ -14,10 +14,26 @@ class company
   public $mainPhone;
   public $fax;
 
+  function __construct()
+  {
+  }
+
   public function insert()
   {
     $global = new _global;
+
     $global->insert('companies',$this);
+    if ($global->success == true)
+return true;
+else 
+return $global->error; 
+  }
+
+  public function update($filter)
+  {
+    $global = new _global;
+$exclude = array('streetNumber','streetName','streetType','city','state','zip','buildingNumber');
+    $global->update('companies',$this,$filter,$exclude);
     if ($global->success == true)
 return true;
 else 
