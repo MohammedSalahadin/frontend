@@ -17,6 +17,7 @@ body {
 html{
   font-size: 86.5%;
 }
+
 .bg--primary {
   background-color: #e2e2e2 !important;
   background-color: #e2e2e2;
@@ -31,11 +32,46 @@ html{
   color: white;
 }
 button{
+  background-color: #03508e !important;
   transition: all 0.3s ease-in-out !important;
+  border: none !important;
   &:hover{
 box-shadow: rgba(128, 128, 128, 0.671) 0px 0px 10px;
-  
   }
+}
+
+//
+.dropdown-menu {
+  padding: 0!important;
+}
+//
+.dropdown-toggle::after {
+  content: none !important;
+}
+//
+label {
+  text-align:right;
+  width:100%;
+}
+//
+@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none;}
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+  .navbar-expand-lg .navbar-nav .nav-link{padding: 0px 0.5rem;}
+  .navbar .nav-item:not(:last-child) .nav-link {
+    border-right: 1px solid #e2e2e2;}
+}
+//btn beside add management
+.btn-addMgt {
+  margin-left: 2rem !important;
+  padding-top: 1px !important;
+  padding-bottom: 1px !important;
+border-radius: 5px !important;
+}
+//btn in edit management
+.btn-addModal {
+  margin-right: 5px !important;
 }
 .minWidth{
   min-width: 1000px;
@@ -43,8 +79,8 @@ box-shadow: rgba(128, 128, 128, 0.671) 0px 0px 10px;
 .height-full {
   min-height: 100vh !important;
 }
-
-.aligin-item-center {
+//corrected from aligin to align -rad
+.align-item-center {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -54,9 +90,19 @@ a {
   transition: all 0.3s ease-in-out;
   color: #181818 !important;
 }
+//
+.nav-link {
+  margin-bottom: 0!important;
+  align-items: center!important;
+  &:hover {
+    background-color: #fff!important;
+    color: #000!important;
+  }
+}
 
 a:hover {
-  color: #0560d8 !important;
+  background-color: #03508e !important;
+  color: #fff!important;
 }
 
 .login-text {
@@ -195,15 +241,14 @@ h1{
 
 .border{
   border: rgba(128, 128, 128, 0.589) solid 1.5px !important;
-  
 }
+
 .issueSummeryModal{
   h2{
     color: #004196;
     font-weight: 400;
     font-size: large;
   }
-
 }
 .relative{
   position: relative ;

@@ -30,7 +30,7 @@
 
 
 
- <div class="d-flex alert-secondary  justify-content-between aligin-item-center">
+ <div class="d-flex alert-secondary  justify-content-between align-item-center">
  	
  		<div class="footerModal">
 			 
