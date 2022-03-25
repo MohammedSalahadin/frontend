@@ -2,7 +2,7 @@
     $MgtCompName = array(
         "Hotel XYZ" => array("","",""),
         "ABC Inc."  => array("","",""),
-        "Sample Co."  => array("","","")
+        "Sample Company"  => array("","","")
         );
 
 ?>
@@ -62,11 +62,11 @@
                                         <option value="c">AC</option>
                                     </select>
                                 </div>
-                                <div class="col-md-2 d-flex">
-                                    <button type="button" class="btn btn-primary btn-addModal" data-bs-toggle="modal" data-bs-target="#addAddress">Add</button>
+                                <div class="col-md-2 d-flex" id="btnBox">
+                                    <button type="button" id="btn-addModal" class="btn btn-primary btn-addModal" data-bs-toggle="modal" data-bs-target="#addAddress">Add</button>
                                     <!-- add address Modal -->
                                     <?php  require('addShippingAddressModal.php')?>
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editAddress">Edit</button>
+                                    <button type="button" id="btn-editModal" class="btn btn-primary btn-editModal" data-bs-toggle="modal" data-bs-target="#editAddress">Edit</button>
                                     <!-- edit address Modal -->
                                     <?php  require('editShippingAddressModal.php')?>
                                 </div>   
@@ -128,8 +128,6 @@
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous"></script>
-<script src="../assets/js/myjquery.js"></script>
-<script src="../assets/js/falcon.js"></script>
-
+<script src="../assets/js/myquery.js"></script>
 </body>
 </html>
