@@ -26,18 +26,18 @@
         <p class="more_details_text">Silvertrac Lite is a lightweight version of our top-rated security management &amp; reporting software. Getting started on Silvertrac Lite is simple. The videos <b>
             <a href="#" target="_blank">on this welcome page</a>
           </b> will tell you everything you need to know to start reporting.</p>
-        <!-- begin youtube video link -->   
+        <!-- begin youtube video link -->
         <div class="embed">
           <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/daClgvlAL3c" allowfullscreen></iframe>
         </div>
-        <!-- end youtube video link -->        
+        <!-- end youtube video link -->
         <p class="more_details_text">Want more help? This resource center has tons of videos and articles that will all show you how to get the most out of Silvertrac Lite. Keep in mind that some of the articles will be covering features only available in Silvertrac Pro. If you want more information on those features, you can <b>
             <a href="#" target="_blank">schedule a demo</a>
           </b> with one of our sales reps.</p>
 
       </div>
 
-      <!-- begin feedback emojies -->       
+      <!-- begin feedback emojies -->
       <div class="feedback_div">
         <span>Did this answer your question?</span>
         <ul class="feedback">
@@ -79,10 +79,64 @@
         </svg>
 
       </div>
-      <!-- end feedback emojies -->   
+      <!-- end feedback emojies -->
     </section>
   </div>
 </section>
+<!-- begin chat area -->
+<audio id="audio" src="asset/sound/notification.mp3"></audio>
+<div class="chat_area">
+  <div class="chat_close"><i class="bi bi-x-circle-fill"></i></div>
+  <!-- messages area -->
+  <div class="messages_area">
+    <div class="chat_area_header">
+      <h3 class="chat_title">Getting Started on Silvertrac Lite</h3>
+      <h3 class="chat_desc">Silvertrac Lite is a lightweight version of our top-rated security management & reporting software.</h3>
+      <div class="avatar_img">
+        <img src="asset/img/avatars/avatar1.png" alt="avatar">
+      </div>
+      <div class="avatar_info">
+        <span>Written by <span class="user">Casey Evans</span></span>
+      </div>
+    </div>
+    <div class="intercom_msg">Sorry that didn't have the answer you needed</div>
+    <div class="intercom_msg"><img src="asset/img/intercom_logo.png">If you'd like, you can ask the team for help here.<span class="chat_time">Bot ·just now</span></div>
+  </div>
+  <!-- messages area -->
+</div>
+<div class="message_form">
+  <!-- emojies -->
+  <div class="emoojies_list" status="0">
+    <span title="bearded_person" role="button">🧔</span>
+    <span title="thumbs_up" role="button">👍</span>
+    <span title="-1" role="button">👎</span>
+    <span title="sob" role="button">😭</span>
+    <span title="confused" role="button">😕</span>
+    <span title="neutral_face" role="button">😐</span>
+    <span title="blush" role="button">😊</span>
+    <span title="heart_eyes" role="button">😍</span>
+    <span title="grinning" role="button">😀</span>
+    <span title="grin" role="button">😁</span>
+    <span title="joy" role="button">😂</span>
+    <span title="rolling_on_the_floor_laughing" role="button">🤣</span>
+    <span title="smiley" role="button">😃</span>
+    <span title="smile" role="button">😄</span>
+    <span title="sweat_smile" role="button">😅</span>
+    <span title="laughing" role="button">😆</span>
+  </div>
+  <!-- emojies -->
+  <textarea class="message_textarea" id="send_chat" placeholder="Write a reply…" aria-label="Write a reply…"></textarea>
+  <label class="attach_file_label" for="attach_file">
+    <i class="bi bi-paperclip"></i>
+    <input id="attach_file" class="chat_attach_file" type="file">
+  </label>
+  <label class="attach_file_label" id="open_emoji_list">
+    <i class="bi bi-emoji-smile"></i>
+  </label>
+
+
+</div>
+<!-- end chat area -->
 <?php include('footer.php'); ?>
 <!-- Custom js file-->
 <script src="asset/js/more_details.js"> </script>
