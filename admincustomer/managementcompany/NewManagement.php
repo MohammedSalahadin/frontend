@@ -26,16 +26,11 @@ if (isset($_POST["companyName"]))
 }
   
 ?>
-<div class="d-flex justify-content-center">
+<div class="bg-light p-5 rounded shadow d-flex justify-content-center">
 <div class="col-lg-6">
 
-<?php
-//require('../../components/manage-company/addnewmanagement.php')
-?>
-
-
   <div class=" p-1 rounded text-center mt-3 bg--primary">
-    <h3 class="" style="color: gray;">ADD NEW MANAGEMENT COMPANY</h3>
+    <h4 class="" style="color: gray;">ADD NEW MANAGEMENT COMPANY</h4>
   </div>
 
   <?php

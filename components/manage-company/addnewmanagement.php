@@ -1,37 +1,37 @@
 <div class="col-lg-12 mt-2">
-<form action="" method="post">
+<form action="" class="mb-2" method="post">
   <div class="form-group row mt-2 mb-2">
-    <label for="companyName" class="col-sm-3 col-form-label text-end">Company Name</label>
+    <label for="companyName" class="col-sm-3 col-form-label">Company Name</label>
     <div class="col-sm-9">
       <input type="text" class="form-control required" required name="companyName" id="companyName" placeholder="Company Name">
     </div>
   </div> 
   <div class="form-group row  mb-2">
-    <label for="webAddress" class="col-sm-3 col-form-label text-end">Web Address</label>
+    <label for="webAddress" class="col-sm-3 col-form-label">Web Address</label>
     <div class="col-sm-9">
       <input type="text" class="form-control" name="webAddress" id="webAddress" placeholder="Web Address">
     </div>
   </div>
   <div class="form-group row  mb-2">
-    <label for="webAddress" class="col-sm-3 col-form-label text-end">Note</label>
+    <label for="webAddress" class="col-sm-3 col-form-label">Note</label>
     <div class="col-sm-9">
       <textarea size=2 class="form-control col-sm-12" id="note" name="note"></textarea>
     </div>
   </div>
   <div class="form-group row  mb-2">
-    <label for="streetNumber" class="col-sm-3 col-form-label text-end">Street Number</label>
+    <label for="streetNumber" class="col-sm-3 col-form-label">Street Number</label>
     <div class="col-sm-9">
       <input type="text" class="form-control" name="streetNumber" id="streetNumber" placeholder="Street Number">
     </div>
   </div>
   <div class="form-group row  mb-2">
-    <label for="streetName" class="col-sm-3 col-form-label text-end">Street Name</label>
+    <label for="streetName" class="col-sm-3 col-form-label">Street Name</label>
     <div class="col-sm-9">
       <input type="text" class="form-control" name="streetName" id="streetName" placeholder="Street Name">
     </div>
   </div> 
   <div class="form-group row  mb-2">
-    <label for="streetType" class="col-sm-3 col-form-label text-end">Street type</label>
+    <label for="streetType" class="col-sm-3 col-form-label">Street type</label>
     <div class="col-sm-9">
     <select name="streetType" class="form-control" id="streetType">
       <option></option>
@@ -78,7 +78,7 @@
       </div>
   </div>
   <div class="form-group row  mb-2">
-    <label for="streetType" class="col-sm-3 col-form-label text-end">City, State, Zip</label>
+    <label for="streetType" class="col-sm-3 col-form-label">City, State, Zip</label>
     <div class="col-sm-3">
       <input type="text" class="form-control" name="city" id="city" placeholder="City">
     </div>
@@ -141,19 +141,19 @@
     </div>
   </div>
   <div class="form-group row  mb-2">
-    <label for="buildingNumber" class="col-sm-3 col-form-label text-end">Building Number</label>
+    <label for="buildingNumber" class="col-sm-3 col-form-label">Building Number</label>
     <div class="col-sm-9">
       <input type="text" class="form-control" name="buildingNumber" id="buildingNumber" placeholder="Building Number">
     </div>
   </div>
   <div class="form-group row  mb-2">
-    <label for="mainPhone" class="col-sm-3 col-form-label text-end">Main Phone</label>
+    <label for="mainPhone" class="col-sm-3 col-form-label">Main Phone</label>
     <div class="col-sm-4">
       <input type="text" class="form-control" name="mainPhone" id="mainPhone" placeholder="Main Phone">
     </div>
   </div>
   <div class="form-group row  mb-2">
-    <label for="fax" class="col-sm-3 col-form-label text-end">fax</label>
+    <label for="fax" class="col-sm-3 col-form-label">fax</label>
     <div class="col-sm-4">
       <input type="text" class="form-control" name="fax" id="fax" placeholder="fax">
     </div>

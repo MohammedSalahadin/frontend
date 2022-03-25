@@ -56,7 +56,6 @@ $shippingAddress->zip =trim($_POST['zip']);
 $shippingAddress->country =trim($_POST['country']);
 $shippingAddress->buildingNumber =trim($_POST['buildingNumber']);
 $shippingAddress->addressType =trim($_POST['addressType']);
-//$shippingAddress->companyId = $companyId;
 
 $result = $shippingAddress->insert();
   if ($result==true)
@@ -68,18 +67,47 @@ $result = $shippingAddress->insert();
 <script>
   $( function() {
     $( "#ِaddDialog" ).dialog({
-      autoOpen: false,
-      width: "30%", height: 450
+      autoOpen: false, width:'auto',
+       height: 450
     });
     $( "#Add" ).on( "click", function() {
       $( "#ِaddDialog" ).dialog( "open" );
     });
+    $( "#ِeditDialog" ).dialog({
+      autoOpen: false, width:'auto',
+       height: 450
+    });
+    $( "#Edit" ).on( "click", function() {
+      $( "#ِeditDialog" ).dialog( "open" );
+      var selected = $('#slcShippingAddress').find('option:selected');
+       var shippingAddress = selected.data('shippingaddress'); 
+       alert(JSON.stringify(shippingAddress));
+    $("#editAddressType").val(shippingAddress.addressType).change();
+      $( "#editBuildingNumber").val(shippingAddress.buildingNumber);
+      $( "#editCountry").val(shippingAddress.country);
+      $( "#editZip").val(shippingAddress.zip)
+      $( "#editState").val(shippingAddress.state).change();
+      $( "#editCity").val(shippingAddress.city);
+      $( "#editAddressLine2").val(shippingAddress.addressLine2);
+      $( "#editStreetType").val(shippingAddress.streetType).change();
+      $( "#editStreetName").val(shippingAddress.streetName);
+      $( "#editStreetNumber").val(shippingAddress.streetNumber);
+    });
+    
     $('#slcCompany').on('change', function() {
+      if (this.value == "Choose")
+      window.location.href = window.location.origin+"/Frontend/admincustomer/managementcompany/EditManagement.php";
+      else
       window.location.href = window.location.origin+"/Frontend/admincustomer/managementcompany/EditManagement.php?companyId="+this.value;
+});
+$('#slcShippingAddress').on('change', function() {
+ 
+     $('#billingAddress').val($('#slcShippingAddress option:selected').html());
+    
 });
   } );
   </script>
-<div class="d-flex justify-content-center">
+<div class="bg-light p-5 rounded shadow d-flex justify-content-center">
 <div class="col-lg-6">
   <div class=" p-1 rounded text-center mt-3 bg--primary">
     <h3 class="" style="color: gray;">EDIT MANAGEMENT COMPANY</h3>
