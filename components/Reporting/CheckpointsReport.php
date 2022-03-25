@@ -2,7 +2,7 @@
 
                     <div style="margin-left: 110px;">
                         <div style="margin-left: -18px;">
-                            <select id="cars" name="cars" size="4" multiple style="width: 400px; height: 95px; margin-left: 18px;">
+                            <select id="" name="" size="4" multiple style="width: 400px; height: 95px; margin-left: 18px;">
                                 <option value="">All Properties</option>
                                 <option value="">Alpha Patrol</option>
                                 <option value="">Article Building</option>
