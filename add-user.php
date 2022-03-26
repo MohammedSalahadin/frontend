@@ -1,112 +1,16 @@
 <?php
-ob_start();
-session_start();
-require('../test/db.php');
-require('../test/menus/navbar.php'); 
+
+require('menus/navbar.php'); 
 
 
-if($_SESSION['loggedin'] != true)
-{
-    header("Location: https://test.rocketsweb.net/");
-}
-
-/***** Begin Add user *****/
-
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') 
-{
-			   if(isset($_POST['registernow'])){
-			 
-   $firstname = $mysqli->escape_string($_POST['firstname']);
-   $lastname = $mysqli->escape_string($_POST['lastname']);
-   $username = $mysqli->escape_string($_POST['username']);
-   $mcompany = $mysqli->escape_string($_POST['mcompany']);
-   $role = $mysqli->escape_string($_POST['role']);
-   $email = $mysqli->escape_string($_POST['email']);
-   $image = "https://test.rocketsweb.net/images/messi.jpeg";
-   $password = MD5($_POST['password']);
-   $confirmpassword = MD5($_POST['confirmpassword']);
-   
-   
-   if($_POST['password'] === $_POST['confirmpassword']){
-       if(strlen($username)<= 12){
-           if(strlen($password)>= 6){
-     $result = $mysqli->query("SELECT * FROM users WHERE email = '".$email."'");
-			 	 if ( $result->num_rows > 0 ){
-   echo '<center>
-          <div>
-        <p style="color:black;"><strong>Sorry! this email already registered</strong></p>
-          </div>
-        </center>';
-}else {
-		
-	
- $result2 = $mysqli->query("INSERT INTO users (firstname, lastname, email, username, password, image, companymanagement, role) VALUES ('".$firstname."','".$lastname."','".$email."','".$username."','".$password."','".$image."','".$mcompany."','".$role."')");
-			 	    if($result2){
-			 	        	    echo '<center>
-          <div>
-        <p style="color:white;background-color:green;"><strong>User Added Successfully</strong></p>
-          </div>
-        </center>';
-			 	    }else{
-			       
-			         echo '<center>
-          <div>
-        <p style="color:white;background-color:green;"><strong>Query did not executed correctly</strong></p>
-          </div>
-        </center>';
-			      
-			   }
-			 	    
-			 	}
-       }else{
-			       
-			         echo '<center>
-          <div>
-        <p style="color:white;background-color:green;"><strong>Password can not be less than 6 characters</strong></p>
-          </div>
-        </center>';
-			      
-			   }	
-   }else{
-			       
-			         echo '<center>
-          <div>
-        <p style="color:white;background-color:green;"><strong>Username can not be more than 12 characters</strong></p>
-          </div>
-        </center>';
-			      
-			   }	
-			   }else{
-			       
-			         echo '<center>
-          <div>
-        <p style="color:white;background-color:green;"><strong>Same password please</strong></p>
-          </div>
-        </center>';
-			      
-			   }		
-			   
-   
-			   }else{
-			       	         echo '<center>
-          <div>
-        <p style="color:white;background-color:green;"><strong>something went wrong</strong></p>
-          </div>
-        </center>';
-			   }
-}
-
-
-?>
-
+?> 
 <!--End Add user -->
 
 
 
 <body>
  <form autocomplete="off" action="" method="POST"
- style="background-color:#edf2ef;border-radius:25px;box-shadow: 5px 10px 18px #888888;margin-left:450px;margin-top:50px;margin-right:450px;padding:50px">
+ style="background-color:#edf2ef">
      
      <div class="form-group">
     <input type="text" class="form-control" id="exampleInputFirstname" name="firstname" placeholder="First Name .." autocomplete="false" required>

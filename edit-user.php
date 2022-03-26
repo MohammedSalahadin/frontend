@@ -1,141 +1,17 @@
 <?php
-ob_start();
-session_start();
-require('../test/db.php');
-require('../test/menus/navbar.php'); 
+
+require('menus/navbar.php'); 
 
 
-if($_SESSION['loggedin'] != true)
-{
-    header("Location: https://test.rocketsweb.net/");
-}
-
-/***** Begin Add user *****/
-$uid = $_GET['uid'];
-
-define($firstname,"");
-define($username,"");
-define($lastname,"");
-define($mCompany,"");
-define($email,"");
-define($mEmail,"");
-define($cardID,"");
-define($phone,"");
-define($cell,"");
-define($address,"");
-define($role,"");
-define($image,"https://test.rocketsweb.net/images/empty.webp");
-define($lastlogin,"");
-
-if($uid != NULL)
-{
-    $result = $mysqli->query("SELECT * FROM users WHERE id = '$uid'");
-    
-      if ($result->num_rows > 0) {
-          while ($row = $result->fetch_assoc()) { 
-              {
-                   $firstname = $row["firstname"];
-                   $lastname = $row["lastname"];
-                   $username = $row["username"];
-                   $mCompany = $row["companymanagement"];
-                   $email = $row["email"];
-                   $mEmail = $row["email"];
-                   $cardID = $row["id"];
-                   $phone = $row["phone"];
-                   $cell = $row["cell"];
-                   $address = $row["address"];
-                   $role = $row["role"];
-                   $image = $row["image"];
-                   $lastlogin = "2014-10-22 14:26:15";
-        
-                }
-        
-            }
-        }
-        
-       
-}
-
-
-/********** UPDATE USER **********/
-
-
-			   if(isset($_POST['updateme'])){
-			       
-    $target_dir = "images/";
-    $target_file = $target_dir . basename($_FILES["img"]["name"]);
-    $uploadOk = 1;
-    $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-    
-  
-			 
-   $_firstname = $mysqli->escape_string($_POST['firstname']);
-   $_lastname = $mysqli->escape_string($_POST['lastname']);
-   $_username = $mysqli->escape_string($_POST['username']);
-   $_mcompany = $mysqli->escape_string($_POST['mCompany']);
-   $_role = $mysqli->escape_string($_POST['role']);
-   $_email = $mysqli->escape_string($_POST['mail']);
-   $_mEmail = $mysqli->escape_string($_POST['mMail']);
-   $_address = $mysqli->escape_string($_POST['address']);
-   $_cell = $mysqli->escape_string($_POST['cell']);
-   $_phone = $mysqli->escape_string($_POST['phone']);
-   $_cardID = $mysqli->escape_string($_POST['cardID']);
-   
-   if (move_uploaded_file($_FILES["img"]["tmp_name"], $target_file)) {
-    $_image = "https://test.rocketsweb.net/images/".basename($_FILES["img"]["name"]);
-  } else {
-    $_image = $image;
-  }
-   
-   
-   
-   
-     $result = $mysqli->query("SELECT * FROM users WHERE id = '".$_cardID."'");
-			 	 if ( $result->num_rows < 0 ){
-   echo '<center>
-          <div>
-        <p style="color:black;"><strong>Sorry! this User not found</strong></p>
-          </div>
-        </center>';
-}else {
-		
-	
- $result2 = $mysqli->query("UPDATE users SET firstname = '".$_firstname."', lastname = '".$_lastname."', username = '".$_username."', companymanagement = '".$_mcompany."', role = '".$_role."', email = '".$_email."', mEmail = '".$_mEmail."', address = '".$_address."', cell = '".$_cell."', phone = '".$_phone."', image = '".$_image."' WHERE id = '".$cardID."'");
-			 	    if($result2){
-			 	        	    echo '<center>
-          <div>
-        <p style="color:white;background-color:green;"><strong>User Updated Successfully <u><a href="https://test.rocketsweb.net/edit-user.php?uid='.$cardID.'" style="color:yellow">Reload page</a></u></strong></p>
-          </div>
-        </center>';
-			 	    }else{
-			       
-			         echo '<center>
-          <div>
-        <p style="color:white;background-color:green;"><strong>Query did not executed correctly</strong></p>
-          </div>
-        </center>';
-			      
-			   }
-			 	    
-			 	}			
-			   
-   
-			   }
-
-
-/********** UPDATE USER **********/
 ?>
-
-
-
 
 
 <body>
  <form autocomplete="off" action="" method="POST" enctype="multipart/form-data" data-ajax="false" class="mobile"
- style="background-color:#edf2ef;border-radius:25px;box-shadow: 5px 10px 18px #888888;padding:50px">
+ style="background-color:#e0e0e0;padding:50px">
      
      <div class="row">
-         <div class="col-md-12 float-left"">
+         <div class="col-md-12 float-left">
              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Choose User</button>
          </div>
          
@@ -147,35 +23,35 @@ if($uid != NULL)
           
           <div class="form-group">
             <label for="username">User Name</label>
-            <input type="text" class="form-control" id="username" name="username" value="<?echo $username; ?>">
+            <input type="text" class="form-control" id="username" name="username" value="">
           </div>
           <div class="form-group">
             <label for="lastLogin">Last Login Date</label>
-            <input type="text" class="form-control" id="lastLogin" name="lastLogin" value="<?echo $lastlogin; ?>" disabled>
+            <input type="text" class="form-control" id="lastLogin" name="lastLogin" value="" disabled>
           </div>
           <div class="form-group">
             <label for="mCompany">Management Company Name</label>
-            <input type="text" class="form-control" id="mCompany" name="mCompany" value="<?echo $mCompany; ?>">
+            <input type="text" class="form-control" id="mCompany" name="mCompany" value="">
           </div>
           <div class="form-group">
             <label for="firstname">First Name</label>
-            <input type="text" class="form-control" id="firstname" name="firstname" value="<?echo $firstname; ?>">
+            <input type="text" class="form-control" id="firstname" name="firstname" value="">
           </div>
           <div class="form-group">
             <label for="lastname">Last Name</label>
-            <input type="text" class="form-control" id="lastname" name="lastname" value="<?echo $lastname; ?>">
+            <input type="text" class="form-control" id="lastname" name="lastname" value="">
           </div>
           <div class="form-group">
             <label for="mail">Email Address</label>
-            <input type="text" class="form-control" id="mail" name="mail" value="<?echo $email; ?>">
+            <input type="text" class="form-control" id="mail" name="mail" value="">
           </div>
           <div class="form-group">
             <label for="mMail">Maintenance Email</label>
-            <input type="text" class="form-control" id="mMail" name="mMail" value="<?echo $mEmail; ?>">
+            <input type="text" class="form-control" id="mMail" name="mMail" value="">
           </div>
           <div class="form-group">
             <label for="cardID">Time Card ID</label>
-            <input type="text" class="form-control" id="cardID" name="cardID" value="<?echo $cardID; ?>" disabled>
+            <input type="text" class="form-control" id="cardID" name="cardID" value="">
           </div>
       </div>
             <div class="col-md-4">

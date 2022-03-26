@@ -44,10 +44,10 @@
           Users
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="https://test.rocketsweb.net/add-user.php">Add New User</a>
-          <a class="dropdown-item" href="https://test.rocketsweb.net/edit-user.php">Edit User</a>
-          <a class="dropdown-item" href="https://test.rocketsweb.net/change-password.php">Change Password</a>
-          <a class="dropdown-item" href="https://test.rocketsweb.net/edit-notification.php">Edit Notifications</a>
+          <a class="dropdown-item" href="add-user.php">Add New User</a>
+          <a class="dropdown-item" href="edit-user.php">Edit User</a>
+          <a class="dropdown-item" href="change-password.php">Change Password</a>
+          <a class="dropdown-item" href="edit-notification.php">Edit Notifications</a>
         </div>
       </li>
       <li class="nav-item">
