@@ -9,8 +9,8 @@ require('menus/navbar.php');
 
 
 <body>
- <form autocomplete="off" action="" method="POST"
- style="background-color:#edf2ef">
+ <form autocomplete="off" action="" method="POST" class="mobile"
+ style="background-color:#e0e0e0;padding:50px;">
      
      <div class="form-group">
     <input type="text" class="form-control" id="exampleInputFirstname" name="firstname" placeholder="First Name .." autocomplete="false" required>

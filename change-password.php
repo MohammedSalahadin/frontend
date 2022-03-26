@@ -9,7 +9,7 @@ require('menus/navbar.php');
 
 
 <body>
- <form autocomplete="off" action="" method="POST"
+ <form autocomplete="off" action="" method="POST" class="mobile"
  style="background-color:#e0e0e0;padding:50px">
      
      <div class="form-group">
