@@ -6,7 +6,7 @@
       // suppose there is a list of many bio in database and we get it as a json file such as bellow
       $bio = json_decode('[
   {
-     "Titel":"Start Here",
+     "Title":"Start Here",
      "url":"1",
      "icon":"bi-file-earmark-plus",
      "body":"A few tools to get you started on your journey with Silvertrac",
@@ -15,7 +15,7 @@
      "avatar":"avatar1.png"
   },
   {
-    "Titel":"Property Basics",
+    "Title":"Property Basics",
     "url":"2",
     "icon":"bi-folder-plus",
     "body":"Includes management companies, adding a property, addresses, units, locations, post orders, and more.",
@@ -24,7 +24,7 @@
     "avatar":"avatar1.png"
  },
   {
-    "Titel":"Issue Types",
+    "Title":"Issue Types",
     "url":"3",
     "icon":"bi-info-circle",
     "body":"Includes adding issue types, editing issue types, and general best practices.",
@@ -33,7 +33,7 @@
     "avatar":"avatar1.png"
  },
   {
-    "Titel":"Checkpoints",
+    "Title":"Checkpoints",
     "url":"4",
     "icon":"bi-check-circle",
     "body":"Everything you need to know about Silvertracs Checkpoint feature.",
@@ -42,7 +42,7 @@
     "avatar":"avatar1.png"
  },
  {
-   "Titel":"Tasks",
+   "Title":"Tasks",
    "url":"4",
    "icon":"bi-arrow-repeat",
    "body":"Scheduling reminders so officers know exactly what to do and when.",
@@ -51,7 +51,7 @@
    "avatar":"avatar1.png"
 },
  {
-   "Titel":"Managing Users",
+   "Title":"Managing Users",
    "url":"4",
    "icon":"bi-person-check",
    "body":"Includes adding and managing officers, supervisors, and customer users.",
@@ -60,7 +60,7 @@
    "avatar":"avatar1.png"
 },
  {
-   "Titel":"Device Maintenance",
+   "Title":"Device Maintenance",
    "url":"4",
    "icon":"bi-phone",
    "body":"Everything you need to manage your devices in Silvertrac.",
@@ -69,7 +69,7 @@
    "avatar":"avatar1.png"
 },
  {
-   "Titel":"The Issue Monitor",
+   "Title":"The Issue Monitor",
    "url":"4",
    "icon":"bi-laptop",
    "body":"",
@@ -90,7 +90,7 @@
                   <button class="bio_icon_btn"><i class="bi <?= $item->icon; ?>"></i></button>
                 </div>
                 <div class="col-xl-10 col-lg-10 col-md-9 col-sm-8 col-xs-12">
-                  <h3 class="bio_title"><?= $item->Titel; ?></h3>
+                  <h3 class="bio_title"><?= $item->Title; ?></h3>
                   <p><?= $item->body; ?></p>
                   <div class="avatar">
                     <div class="avatar_img">
@@ -114,8 +114,8 @@
 
 
  <?php include('footer.php');?>
-  <!-- Custom js file-->
-
+<!-- Custom js file-->
+<script src="asset/js/index.js"> </script>
 
 </body>
 

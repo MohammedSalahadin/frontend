@@ -8,7 +8,8 @@ $('body').delegate('#search', 'input', function () {
 		$('#clear_search_btn').hide();
 	}else{
 		$('#clear_search_btn').show();
-	}
+		}
+
 });
 $('body').delegate('#search', 'click', function () {
 	if($(this).val()==""){
