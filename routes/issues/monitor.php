@@ -1,7 +1,4 @@
-<?php
 
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,13 +11,16 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../../assets/styles/styles.css">
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/widgets.css">
+    
     <title>Falcontrac</title>
 </head>
 
 <body>
     <?php require('../../components/navbar.php') ?>
 
-    <?php require('../../components/menu.php') ?>
+    <?php //require('../../components/menu.php') ?>
     <div class="d-flex flex-row-reverse overflow-auto">
 
         <?php
