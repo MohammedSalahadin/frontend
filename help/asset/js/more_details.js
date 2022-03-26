@@ -6,12 +6,12 @@ $('body').delegate('.feedback li', 'click', function () {
   });
 	$(this).addClass('active');
   if(reaction=="angry"){
-    $('.message_form').delay(2000).show(90);
-    $('.chat_area').delay(2000).show(90);
+    $('.message_form').delay(500).show(90);
+    $('.chat_area').delay(500).show(90);
     
     setTimeout(function () {
       $('#audio').get(0).play();
-    }, 1000);
+    }, 100);
   }
 });
 //close button for chat
