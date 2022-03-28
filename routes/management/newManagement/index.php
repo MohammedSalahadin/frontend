@@ -11,8 +11,8 @@
   <title>Falcontrac</title>
 </head>
 <body>
-<?php require('../components/navbar.php') ?>
-<?php require('../components/menu.php') ?>
+
+
 <main class="pt-3">
     <div class="container-fluid">
         <div class="row justify-content-center">
@@ -173,13 +173,5 @@
         </div>
     </div>
 </main>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<script
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"></script>
-<script src="../assets/js/myjquery.js"></script>
-<script src="../assets/js/falcon.js"></script>
 
 </body>
-</html>

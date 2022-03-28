@@ -1,11 +1,4 @@
-<?php
-    $MgtCompName = array(
-        "Hotel XYZ" => array("","",""),
-        "ABC Inc."  => array("","",""),
-        "Sample Company"  => array("","","")
-        );
 
-?>
  
 <!DOCTYPE html>
 <html lang="en">
@@ -20,9 +13,18 @@
   <title>Falcontrac</title>
 </head>
 <body>
-<?php require('../components/navbar.php') ?>
 
-<?php require('../components/menu.php') ?>
+
+
+<?php
+    $MgtCompName = array(
+        "Hotel XYZ" => array("","",""),
+        "ABC Inc."  => array("","",""),
+        "Sample Company"  => array("","","")
+        );
+
+?>
+
 <main class="pt-3">
     <div class="container-fluid">
         <div class="row justify-content-center">
@@ -128,6 +130,6 @@
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous"></script>
-<script src="../assets/js/myquery.js"></script>
+<script src="js/myquery.js"></script>
 </body>
 </html>
