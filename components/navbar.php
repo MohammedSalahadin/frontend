@@ -64,8 +64,8 @@
                         Management
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">New Management Company</a>
-                        <a class="dropdown-item" href="#">Edit Management Company</a>
+                        <a class="dropdown-item" href="../../management/newManagement/">New Management Company</a>
+                        <a class="dropdown-item" href="../../management/editManagement/">Edit Management Company</a>
                     </div>
                 </li>
             </ul>
