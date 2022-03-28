@@ -8,14 +8,14 @@
     <link rel="shortcut icon" type="image/x-icon" href="images/logo.jpg">
 
     <title>Falcontrac</title>
-    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="../../../assets/css/font-awesome.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="css/owl.carousel.min.css"> -->
     <!-- <link rel="stylesheet" href="css/owl.theme.default.css"> -->
     <link rel="stylesheet" href="../../../assets/css/style.css">
     <link rel="stylesheet" href="../../../assets/css/widgets.css">
-    <link href="css/select2.min.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="css/daterangepicker.css" />
+    <link href="../../../assets/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/daterangepicker.css" />
     <!-- site font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -77,11 +77,11 @@
     <?php require_once '../../../components/selectModal.php'; ?>
 
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/select2.min.js"></script>
-    <script src="js/moment.min.js"></script>
-    <script src="js/daterangepicker.js"></script>
+    <script src="../../../assets/js/jquery.min.js"></script>
+    <script src="../../../assets/js/bootstrap.js"></script>
+    <script src="../../../assets/js/select2.min.js"></script>
+    <script src="../../../assets/js/moment.min.js"></script>
+    <script src="../../../assets/js/daterangepicker.js"></script>
 
     <!-- jquery Code Start -->
     <script>
