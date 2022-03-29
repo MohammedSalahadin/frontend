@@ -3,7 +3,7 @@
     <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
         <div class="">
             <a class="navbar-brand" href="../issues/monitor.php">
-                <img src="../../../assets/images/logo.png" alt="" class="nav-logo">
+                <img src="../../../assets/images/logo.png" alt="" class="nav-logo" width="50" hight="50">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

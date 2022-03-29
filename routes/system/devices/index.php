@@ -9,12 +9,14 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="../styles/styles.css">
   <link rel="stylesheet" href="../styles/mystyles.css">
-  <script src="https://use.fontawesome.com/9608db71df.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
   <title>Falcontrac</title>
 </head>
 
 <body>
+
+  <?php require('../../../components/navbar.php') ?>
+
   <div class="d-flex flex-row-reverse overflow-auto">
 
     <div class="container">
@@ -27,6 +29,10 @@
       ?>
     </div>
   </div>
+
+  <script src="https://use.fontawesome.com/9608db71df.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="../../../assets/js/bootstrap.js"></script>
   <script src="js/device.js"></script>
 </body>
 

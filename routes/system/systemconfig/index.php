@@ -9,10 +9,13 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="../styles/styles.css">
   <link rel="stylesheet" href="../styles/mystyles.css">
+
   <title>Falcontrac</title>
 </head>
 
 <body>
+  <?php require('../../../components/navbar.php') ?>
+
   <div class="d-flex flex-row-reverse overflow-auto">
     <?php
     // require('../components/monitor-table/monitorMessageBox.php')
@@ -22,13 +25,15 @@
       <div class="p-1 rounded text-center mt-3 bg--primary header1">
         <h3 class="main-header">SYSTEM CONFIGURATION</h3>
       </div>
-      <?php  
+      <?php
       require('system-table/systemTable.php')
       ?>
     </div>
   </div>
 
   <script src="js/system.js"></script>
+  <script src="../../../assets/js/jquery.min.js"></script>
+  <script src="../../../assets/js/bootstrap.js"></script>
 </body>
 
 </html>
