@@ -21,7 +21,7 @@
   <!-- <link rel="stylesheet" href="asset/css/rtl.css"> -->
 
   <!-- Application icon-->
-  <link rel="icon" href="asset/img/favicon.png">
+  <link rel="icon" href="../assets/images/favicon.png">
   <!-- Application Title-->
   <title>Silvertrac Software Help Center</title>
 </head>
@@ -32,7 +32,7 @@
     <div class="container">
       <div class="header_title">
         <div class="logo"><a href="index.php"><img src="asset/img/giflogo.gif"></a></div>
-        <a href="#"  target="_blank" class="go_to_Silvertrac"><i class="bi bi-box-arrow-up-right"></i>Go to FalconTrac</a>
+        <a href="../index.php"  target="_blank" class="go_to_Silvertrac"><i class="bi bi-box-arrow-up-right"></i>Go to FalconTrac Login</a>
       </div>
       <div class="header_body">
         <p>Advice and answers from the Silvertrac Team</p>

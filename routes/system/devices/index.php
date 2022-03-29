@@ -9,7 +9,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="../styles/styles.css">
   <link rel="stylesheet" href="../styles/mystyles.css">
+  <link rel="icon" href="../../../assets/images/favicon.png">
   
+
   <title>Falcontrac</title>
 </head>
 

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../../../assets/styles/styles.css">
     <link rel="stylesheet" href="../../../assets/css/style.css">
     <link rel="stylesheet" href="../../../assets/css/widgets.css">
+    <link rel="icon" href="../../../assets/images/favicon.png">
     
     <title>Falcontrac</title>
 </head>

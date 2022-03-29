@@ -19,13 +19,14 @@
     <!-- site font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../../assets/images/favicon.png">
+    
 </head>
 
 <body>
     <?php
-        require_once '../../../components/navbar.php';
+    require_once '../../../components/navbar.php';
     ?>
 
     <section class="report-section">
@@ -85,26 +86,26 @@
 
     <!-- jquery Code Start -->
     <script>
-    $(document).ready(function() {
-        $("select[name='report_name']").change(function() {
-            var report_val = this.value;
-            if (report_val != 0) {
-                $(".form-section").html(" ");
-                $(".form-section").append("<img src='images/loader.gif'  width='300px'/>");
-                $.get("reports_forms/" + report_val + ".php", function(data,
-                    status) {
-                    $(".form-section").html(data);
-                }).fail(function() {
-                    alert('woops!! Something went wrong !!'); // or whatever
+        $(document).ready(function() {
+            $("select[name='report_name']").change(function() {
+                var report_val = this.value;
+                if (report_val != 0) {
                     $(".form-section").html(" ");
-                    $(".form-section").append(
-                        "<div class='alert alert-danger' role='alert'>Something went wrong, please try again later !!</div>"
-                    );
-                });
-            }
+                    $(".form-section").append("<img src='images/loader.gif'  width='300px'/>");
+                    $.get("reports_forms/" + report_val + ".php", function(data,
+                        status) {
+                        $(".form-section").html(data);
+                    }).fail(function() {
+                        alert('woops!! Something went wrong !!'); // or whatever
+                        $(".form-section").html(" ");
+                        $(".form-section").append(
+                            "<div class='alert alert-danger' role='alert'>Something went wrong, please try again later !!</div>"
+                        );
+                    });
+                }
 
+            });
         });
-    });
     </script>
 
     <!-- list of users Script -->
