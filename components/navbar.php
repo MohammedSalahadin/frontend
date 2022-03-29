@@ -44,9 +44,9 @@
                         Users
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Add New User</a>
+                        <a class="dropdown-item" href="../../users/addNewUser/">Add New User</a>
                         <a class="dropdown-item" href="#">Edit User</a>
-                        <a class="dropdown-item" href="#">Change Password</a>
+                        <a class="dropdown-item" href="../../users/changePassword/">Change Password</a>
                         <a class="dropdown-item" href="#">Edit Notification</a>
                     </div>
                 </li>
