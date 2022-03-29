@@ -55,8 +55,8 @@
                         System
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">System Config</a>
-                        <a class="dropdown-item" href="#">Device Maintinance</a>
+                        <a class="dropdown-item" href="../../system/devices/">System Config</a>
+                        <a class="dropdown-item" href="../../system/systemconfig/">Device Maintinance</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
