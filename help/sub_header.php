@@ -31,8 +31,8 @@
   <header class="header">
     <div class="container">
     <div class="header_title">
-        <div class="logo"><a href="index.php"><img src="asset/img/logo.png"></a></div>
-        <a href="https://www.silvertracsoftware.com/"  target="_blank" class="go_to_Silvertrac"><i class="bi bi-box-arrow-up-right"></i>Go to Silvertrac</a>
+        <div class="logo"><a href="index.php"><img src="asset/img/giflogo.gif"></a></div>
+        <a href="#"  target="_blank" class="go_to_Silvertrac"><i class="bi bi-box-arrow-up-right"></i>Go to FalconTrac</a>
       </div>
       <div class="header_body">
         <div class="search_input_div">
