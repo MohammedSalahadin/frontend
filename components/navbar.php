@@ -17,8 +17,8 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="../../issues/monitor">Issue Monitor</a>
-                        <a class="dropdown-item" href="#">New Action</a>
-                        <a class="dropdown-item" href="#">GPS Maps</a>
+                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#newIssueModal" id="cmdnew">New Action</a>
+                        <a class="dropdown-item" href="../../issues/gps/">GPS Maps</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -26,8 +26,8 @@
                         Properites
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Propery Maintinance</a>
-                        <a class="dropdown-item" href="#">Group Management</a>
+                        <a class="dropdown-item" href="../../properties/properties_maintinance">Propery Maintinance</a>
+                        <a class="dropdown-item" href="../../properties/group_managment">Group Management</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
