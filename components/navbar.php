@@ -47,7 +47,7 @@
                         <a class="dropdown-item" href="../../users/addNewUser/">Add New User</a>
                         <a class="dropdown-item" href="../../users/editUser/">Edit User</a>
                         <a class="dropdown-item" href="../../users/changePassword/">Change Password</a>
-                        <a class="dropdown-item" href="#">Edit Notification</a>
+                        <a class="dropdown-item" href="../../users/editNotifications">Edit Notification</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">

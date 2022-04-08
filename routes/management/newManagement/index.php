@@ -9,7 +9,10 @@
 
     <title>Falcontrac</title>
     <link rel="stylesheet" href="../../../assets/css/font-awesome.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="../../../assets/css/bootstrap.css">
+
     <!-- <link rel="stylesheet" href="css/owl.carousel.min.css"> -->
     <!-- <link rel="stylesheet" href="css/owl.theme.default.css"> -->
     <link rel="stylesheet" href="../../../assets/css/style.css">
@@ -53,7 +56,7 @@
                                 </div>
 
                                 <div class="form-group row justify-content-center px-4 my-2">
-                                    <label for="comment" class="col-md-4 col-form-label">Notes</label>
+                                    <label for="comment" class="col-md-4 col-form-label text-md-right">Notes</label>
                                     <div class="col-md-8 px-0">
                                         <textarea class="form-control rounded-0 bg-light" name="comment" placeholder=""></textarea>
                                     </div>
